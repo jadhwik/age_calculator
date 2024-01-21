@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Age calculator
+        </title>
+        <link rel="stylesheet" href="age.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            
+        <table>
+            <tr>
+                <form>
+                <td><label>DAY<br>
+                    <input type="text" id="day" placeholder="DD" >
+                </label></td>
+                <td><label>MONTH<br>
+                    <input type="text" id="month" placeholder="MM">
+                </label></td>
+                <td><label>YEAR<br>
+                    <input type="text" id="year" placeholder="YYYY" >
+                </label></td>
+                </form>
+            </tr>
+        </table>
+        <div class="line"></div>
+        <div class="output">
+            <div class="button">
+            <button onclick="calculateAge()"></button>
+        </div>
+
+            <div >
+                <span id="years">--</span>years
+            </div>
+            <div>
+        
+                <span id="months">--</span>Months
+            </div>
+            <div>
+                <span id="days">--</span>Days
+            </div>
+            
+        </div>
+        
+
+        </div>
+        <script>
+            function calculateAge(){
+                var date=new Date();
+                var year=document.getElementById("year").value;
+                year=parseInt(year);
+                var curyear=date.getFullYear();
+                var years1=curyear-year;
+                var month=document.getElementById("month").value;
+                month=parseInt(month);
+                var curmonth=date.getMonth()+1;
+                if(curmonth < month){
+                         var month1= 12-(month - curmonth);
+                        years1--;
+                    }
+                    else{
+                    var month1=curmonth-month;
+                    }
+
+                
+                
+                var day=document.getElementById("day").value;
+                day=parseInt(day);
+                var curday=date.getDate();
+                day1=curday-day;
+                if (isNaN(year) || isNaN(month) || isNaN(day)){
+                    document.getElementById("years").innerHTML=0;
+                    document.getElementById("months").innerHTML=0;
+                    document.getElementById("days").innerHTML=0;
+                }
+                else{
+                    
+                    document.getElementById("years").innerHTML=years1;
+                   
+                    document.getElementById("months").innerHTML=month1;
+                    document.getElementById("days").innerHTML=day1;
+                
+                    
+                }
+                
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+body{
+    background-color:rgb(235, 228, 228);
+    min-width: 100vh;
+    justify-content: center;
+}
+.container{
+    background-color: rgb(249, 249, 249);
+    justify-content: center;
+    align-items: center;
+    max-width:70vh;
+    min-height:50vh;
+    border:none;
+    margin:400px;
+    border-radius: 20px;
+    padding:20px;
+    
+}
+
+td{
+    padding:20px;
+}
+input{
+    width:100px;
+    height:40px;
+    border:1px solid rgb(173, 167, 167);
+    border-radius:2px;
+    font-size: 30px;
+    font-weight:bolder ;
+    margin-top:10px;
+    font-family: new3;
+    
+}
+.placeholder{
+    color:rgb(173, 167, 167);
+}
+label{
+color:rgb(139, 130, 130);
+font-size:small;
+font-family: new2;
+
+}
+.container button{
+    background-image: url("icon-arrow.svg");
+    background-repeat:no-repeat;
+    background-color:blueviolet;
+    background-position: center;
+    padding:40px;
+    border-radius:40px;
+    float:right;
+    border:none;
+    
+
+}
+@font-face{
+    font-family: "new1";
+    src:url(Poppins-Bold.ttf);
+    
+}
+@font-face{
+    
+    font-family:"new2";
+    src:url(Poppins-BoldItalic.ttf);
+}
+@font-face{
+    
+    font-family: "new3";
+    src:url(Poppins-Regular.ttf);
+}
+
+#years{
+    font-family: new2;
+    font-size:50px;
+    color:blueviolet
+}
+#months{
+    font-family: new2;
+    font-size:50px;
+    color:blueviolet
+}
+#days{
+    font-family: new2;
+    font-size:50px;
+    color:blueviolet;
+}
+.output{
+    font-family: new2;
+    font-size: 50px;
+}
+.line{
+    border-top: 1px solid  rgba(216, 208, 208, 0.548);
+    width:80%;;
+    margin-top:30px;
+    
+}
+button:hover{
+    background-color:black;
+    border:none;
+}
